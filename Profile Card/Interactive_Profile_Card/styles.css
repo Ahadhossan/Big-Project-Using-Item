@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+:root {
+  --primary-color: #22215b;
+  --secondary-color: #d6d6d6;
+  --text-light: #a2a2ba;
+  --extra-light: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background-color: var(--secondary-color);
+  position: relative;
+  isolation: isolate;
+}
+
+.profile__card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  width: 400px;
+  border-radius: 1rem;
+  background-color: var(--extra-light);
+  text-align: center;
+  transition: 0.5s;
+}
+
+.profile__card img {
+  width: 100px;
+}
+
+.profile__card .tag {
+  margin-bottom: 1rem;
+}
+
+.profile__card .tag span {
+  padding: 0.25rem 1.5rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.profile__card .name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.profile__card .designation {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.profile__card .about {
+  margin: 0 2rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.profile__card .social__icons {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social__icons span {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.btn__message {
+  background-color: var(--extra-light);
+}
+
+.btn__connect {
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+}
+
+.detail__card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  width: 400px;
+  border-radius: 1rem;
+  background-color: var(--extra-light);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.detail__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detail__header img {
+  width: 80px;
+}
+
+.detail__header .col {
+  flex: 1;
+}
+
+.detail__header p {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.detail__header h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.detail__card .name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.detail__card .designation {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.detail__card h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.detail__card .about {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.profile__card:hover {
+  transform: translate(-50%, -77%);
+}
+
+.profile__card:hover ~ .detail__card {
+  transform: translate(-50%, 50%);
+}
